@@ -18,5 +18,5 @@ from django.contrib import admin
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('urls/', iot.site.urls)
+    path('iot/', include('iot.urls')),
 ]
