@@ -3,7 +3,7 @@ from . import views
 
 urlpatterns = [
     # list all devices
-    path('devices/', views.DeviceList.as_view(), name='device-list'),
+    path('', views.device_list, name='device-list'),
     # detail view of a device
-    path('devices/<int:pk>/', views.DeviceDetail.as_view(), name='device-detail'),
+    path('<int:pk>/', views.device_detail, name='device-detail'),
 ]

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des Devices</title>
+</head>
+<body>
+    <h1>Liste des Devices</h1>
+    <ul>
+        {% for device in devices %}
+            <li>
+                <strong>{{ device.name }}</strong> (UID: {{ device.uid }})<br>
+                Description: {{ device.description }}<br>
+                Dernière vue : {{ device.lastSeenAt }}<br>
+                IP : {{ device.ip }}
+            </li>
+        {% empty %}
+            <li>Aucun device trouvé.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
