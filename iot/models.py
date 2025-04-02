@@ -10,7 +10,7 @@ class Devices(models.Model):
     room = models.CharField(max_length=100)
     version = models.CharField(max_length=100)
     attach = models.PositiveIntegerField(default=0)
-    platform = models.ForeignKey('Platform', on_delete=models.CASCADE, related_name='devices')
+    #platform = models.ForeignKey('Platform', on_delete=models.CASCADE, related_name='devices')
     otaPassword = models.CharField(max_length=100)
     sensorDelay = models.PositiveIntegerField(default=0)
     rssi = models.PositiveIntegerField(default=0)
